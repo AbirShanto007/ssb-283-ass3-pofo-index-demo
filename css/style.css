@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAV BAR SECTION */
+nav {
+    background: white;
+    /* position: fixed;
+    width: 100%; */
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: #1b1b1b;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 30px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 30px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: #fff;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+        0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: 0 0 1px #33ffff,
+        0 0 1px #66ffff;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+}
+
+.search {
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+}
+
+.show,
+.icon,
+input {
+    display: none;
+}
+
+@media all and (max-width: 968px) {
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul ul li {
+        position: static;
+    }
+
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+
+    nav ul ul a {
+        padding-left: 40px;
+    }
+
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+
+    .show {
+        display: block;
+        color: black;
+        font-size: 18px;
+        padding: 0 15px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover {
+        color: cyan;
+        font-weight: bold;
+    }
+
+    .icon {
+        display: block;
+        color: black;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+
+    .show+a,
+    ul {
+        display: none;
+    }
+
+    [id^=btn]:checked+ul {
+        display: block;
+    }
+}
+
+/* BODY SECTION */
+img {
+    max-width: 100%;
+    /*height: 100px;*/
+    /*height: 788.81px;*/
+    /*background-size: cover;*/
+
+}
+
+.banner {
+    text-align: center;
+    padding: 130px 0%;
+    /*height: 100%;*/
+    background-attachment: fixed;
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+.bg-1 {
+    background-image: url(../images/portfolio-item57.jpg);
+}
+
+.bg-2 {
+    background-image: url(../images/portfolio-item58.jpg);
+}
+
+.bg-3 {
+    background-image: url(../images/portfolio-item59.jpg);
+}
+
+.bg-4 {
+    background-image: url(../images/portfolio-item60.jpg);
+}
+
+.bg-5 {
+    background-image: url(../images/portfolio-item61.jpg);
+}
+
+.bg-6 {
+    background-image: url(../images/portfolio-item62.jpg);
+}
+
+.content-box {
+    width: 100%;
+    text-align: left;
+    margin-top: 45%;
+    color: #000;
+}
+
+p {
+    font-size: 15px;
+    margin-left: 8%;
+}
+
+button.button1 {
+    padding: 10px 20px;
+    font-size: 25px;
+    margin-left: 8%;
+    text-align: center;
+    /*display: block;*/
+    border: none;
+    background: #fff;
+}
+
+button.button2 {
+    padding: 5px 15px;
+    font-size: 12px;
+    margin-left: 8%;
+    text-align: center;
+    color: #fff;
+    border: none;
+    background: #000;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 50px;
+    background: #fff9f9e8;
+}
+
+footer img {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+footer p {
+    text-align: center;
+}
